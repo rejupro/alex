@@ -1,0 +1,124 @@
+a.custom-bell{
+	margin-top: -24px !important;
+}
+a.custom-topmenu{
+	display: inline-block;
+	height: 30px;
+}
+
+
+.custom-topmenu span {
+	display: block;
+	height: 2px;
+	transition: transform 0.3s;
+	width: 25px;
+	background: #111;
+	margin: 8px auto;
+}
+
+.custom-topmenu.topmenu_open span:nth-child(2){
+	display: none;
+}
+.custom-topmenu.topmenu_open span:first-child {
+	transform: translateX(3px) translateY(1px) rotate(45deg);
+	transform-origin: left center;
+}
+.custom-topmenu.topmenu_open span:last-child {
+	transform: translateX(3px) translateY(8px) rotate(-45deg);
+	transform-origin: left center;
+}
+
+/* click-menudata */
+.click-menudata{
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
+	background: #ffffff;
+	position: fixed;
+	left: 100%;
+	top: 100px;
+	z-index: 9;
+	padding: 30px 0px;
+	border-top: 1px solid #111;
+	box-shadow: 0px 3px 10px #dddddd;
+	transition: .2s ease-in-out;
+}
+.click-menudata.menudata_open{
+	left: 0;
+}
+.click-menudata-left{
+	width: 60%;
+	float: left;
+}
+.click-menudata-right{
+	width: 35%;
+	padding-left: 5%;
+	overflow: hidden;
+}
+.click-menudata h2{
+	border-bottom: 1px solid #dddddd;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.click-menudata-rightbtn a{
+	font-size: 14px;
+	padding: 6px;
+	margin: 4px 5px;
+	color: #111;
+	padding-left: 0px;
+	margin-left: 0px;
+	text-decoration: none;
+	transition: .2s ease-in-out;
+}
+.click-menudata-rightbtn a:hover{
+	text-decoration: underline;
+}
+.click-menudata-leftsingle{
+	padding-bottom: 20px;
+}
+.click-menudata-leftsingle-title{
+	width: 10%;
+	float: left;
+}
+.click-menudata-leftsingle-title a{
+	font-size: 16px;
+	text-decoration: none;
+	color: #111111;
+	padding: 3px;
+}
+.click-menudata-leftsingle-click{
+	padding-left: 5%;
+	width: 85%;
+	overflow: hidden;
+}
+.click-menudata-leftsingle-click a{
+	font-size: 13px;
+	text-decoration: none;
+	color: #111111;
+	padding: 3px;
+	margin: 5px;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+.click-menudata-leftsingle-click a:first-child{
+	padding-left: 0px;
+}
+
+
+@media (max-width: 990px){
+	.click-menudata{
+		height: auto;
+	}
+	.click-menudata-left{
+		width: 100%;
+	}
+	.click-menudata-right{
+		width: 100%;
+		padding-left: 0;
+	}
+}
+@media (max-width: 420px){
+	.click-menudata{
+		top: -85px;
+	}
+}
